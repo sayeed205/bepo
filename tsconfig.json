@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "lib": ["ESNext"],
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleDetection": "force",
+        "jsx": "preserve",
+        "allowJs": true,
+
+        /* Bundler mode */
+        "moduleResolution": "Node",
+        "allowImportingTsExtensions": true,
+        "verbatimModuleSyntax": true,
+        "noEmit": true,
+
+        /* Linting */
+        "skipLibCheck": true,
+        "strict": true,
+        "noFallthroughCasesInSwitch": true,
+        "forceConsistentCasingInFileNames": true,
+
+        /* Extras */
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"],
+            "@test/*": ["test/*"]
+        },
+        "allowSyntheticDefaultImports": true,
+        "incremental": true,
+    },
+    "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx"],
+    "exclude": ["node_modules"]
+  }
