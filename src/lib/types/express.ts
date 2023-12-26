@@ -12,6 +12,16 @@ export type ExpressMiddleware<
     next: NextFunction,
 ) => Promise<void> | void;
 
+// More strictly typed express controller type
+export type ExpressController<
+    ReqBody = Record<string, unknown>,
+    Res = Record<string, unknown>,
+    QueryString = Record<string, unknown>,
+> = (
+    req: TypedRequest<ReqBody, QueryString>,
+    res: Response<Res>
+) => Promise<void | any> | void;
+
 // More strictly typed Express.Request type
 export type TypedRequest<
     ReqBody = Record<string, unknown>,
@@ -22,3 +32,5 @@ export type TypedRequest<
     DeepPartial<ReqBody>,
     DeepPartial<QueryString>
 >;
+
+

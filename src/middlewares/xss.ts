@@ -1,4 +1,4 @@
-import type { ExpressMiddleware, SanitizeOptions } from '@/types';
+import type { ExpressMiddleware, SanitizeOptions } from '@/lib/types';
 import { sanitize } from '@/utils';
 
 export const xss = (options?: SanitizeOptions): ExpressMiddleware => {

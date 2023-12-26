@@ -10,21 +10,25 @@ export const errorHandler = (
 ) => {
     let error = { ...err };
     error.message = err.message;
+    let message;
 
     if (err.name === 'CastError') {
-        const message = `Resource not found`;
+        message = `Resource not found`;
         error = new ErrorResponse(message, 404);
     } else if (err.name === 'TypeError') {
-        const message = `An unknown error occurred while processing your request. Please try again later.`;
-        error = new ErrorResponse(message);
+        console.log('error:', err);
+        message = `An unknown error occurred while processing your request. Please try again later.`;
     } else if (err.name === 'JsonWebTokenError') {
-        const message = `Invalid token or Token expired. Please log in again.`;
+        message = `Invalid token or Token expired. Please log in again.`;
         error = new ErrorResponse(message, 401);
+    } else {
+        console.log('error:', err);
+        message = '';
     }
 
     // todo)) add more generic errors
     return res.status(error.statusCode || 500).json({
-        ok: false,
-        error: error.message || 'Server Error',
+        success: false,
+        error: message || error.message || 'Server Error',
     });
 };

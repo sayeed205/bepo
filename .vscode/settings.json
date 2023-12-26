@@ -1,7 +1,31 @@
 {
     "cSpell.words": [
         "bepo",
+        "checkperiod",
+        "fallenbagel",
+        "Gotify",
+        "hformat",
+        "imdb",
+        "Jellyfin",
+        "jellyseerr",
+        "lunasea",
+        "Overseerr",
         "Parens",
-        "trivago"
-    ]
+        "plexguid",
+        "plextv",
+        "Pushbullet",
+        "radarr",
+        "sonarr",
+        "Tautulli",
+        "tmdb",
+        "trivago",
+        "watchlist",
+        "webpush"
+    ],
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
+    "prettier.useEditorConfig": false,
+    "prettier.configPath": ".prettierrc.cjs",
+    "prettier.enableDebugLogs": true
 }
